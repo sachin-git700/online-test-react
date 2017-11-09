@@ -12,7 +12,11 @@ class Quiz extends Component {
       formSubmitted: false,
       correctResponsesCount: null,
     };
-    this.btnStyled = Array(this.props.questions.length).fill({background: "#989898", color: "#fff"});
+    this.btnStyled = Array(this.props.questions.length).fill(0);
+    // btnStyled -
+    // 0 fo not visited
+    // 1 for visited but not answered
+    // 2 for answered
     this.handleNavigation = this.handleNavigation.bind(this);
     this.handleResponseChange = this.handleResponseChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -20,18 +24,19 @@ class Quiz extends Component {
   }
 
   componentDidMount() {
-    this.btnStyled[0] = {background: "#D98880", color: "#fff" };
+    // marking first question as visited but not answered
+    this.btnStyled[0] = 1;
   }
 
   handleNavigation(e) {
     let nextQuestionNo = e.target.value;
     // colors for visited but not answered questions
     if(this.state.response[nextQuestionNo]==='') {
-      this.btnStyled[nextQuestionNo] = {background: "#D98880", color: "#fff" };
+      this.btnStyled[nextQuestionNo] = 1;
     }
     // colors for answered questions
     if(this.state.response[this.state.current]!=='') {
-      this.btnStyled[this.state.current] = {background: "#239B56", color: "#fff"}
+      this.btnStyled[this.state.current] = 2;
     }
     this.setState({
       current: nextQuestionNo,
@@ -65,7 +70,8 @@ class Quiz extends Component {
   handleReset() {
     let responseTemp = this.state.response;
     responseTemp[this.state.current] = '';
-    this.btnStyled[this.state.current] = {background: "#D98880", color: "#fff"};
+    // marking question as visited but not answered
+    this.btnStyled[this.state.current] = 1;
     this.setState({
       response: responseTemp,
     })

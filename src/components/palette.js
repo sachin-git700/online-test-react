@@ -3,15 +3,32 @@ import React, { Component } from 'react';
 function Button(props) {
   let current = parseInt(props.current, 10);
   let value = parseInt(props.value, 10);
-  let paletteBtn;
-  if(current===value)
-    paletteBtn = "btn btn-sm palette-button active"
-  else
-    paletteBtn = "btn btn-sm palette-button"
+  let class1;
 
+
+  if(current===value)
+    class1 = "btn btn-sm palette-button active"
+  else
+    class1 = "btn btn-sm palette-button"
+
+  let styleArr = [
+    {
+      "background-color": "#989898",
+      color: "white"
+    },
+    {
+      "background-color": "#D98880",
+      color: "white"
+    },
+    {
+      "background-color": "#239B56",
+      color: "white"
+    }
+  ]
+  
   return (
     <span className="">
-      <button type="button" className={paletteBtn} style={props.btnStyled[props.value]} onClick={props.handleNavigation} value={props.value}>
+      <button type="button" className={class1} style={styleArr[props.btnStyled[props.value]]} onClick={props.handleNavigation} value={props.value}>
         {props.value + 1}
       </button>
       {(props.value+1)%3===0 && <br />}
