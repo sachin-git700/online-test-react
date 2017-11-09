@@ -1,55 +1,5 @@
-.navigation-button {
-  margin-top: 20px;
-  margin-right: 15px;
-}
-
-.submit-button {
-  margin-top: 30px;
-}
-
-.active {
-  background-color: blue !important;
-}
-
-.palette-buttons-info {
-  margin-top: 40px;
-}
-
-.palette-buttons-info > div {
-  margin-bottom: 20px;
-}
-
-.box {
-  padding: 10px 14px;
-  color: #fff;
-}
-
-.answered {
-  display: inline-block;
-  background-color: #239B56;
-}
-
-.not-visited {
-  display: inline-block;
-  background-color: #9B59B6
-}
-
-.visited-not-answered {
-  display: inline-block;
-  background-color: #A93226;
-}
-
-.current-question {
-  display: inline-block;
-  background-color: blue;
-}
-
-.box-color-info {
-  display: inline-block;
-  margin-left: 15px;
-  font-size: 18px;
-}
-
-.statement {
-  color: #C0392B;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
 }

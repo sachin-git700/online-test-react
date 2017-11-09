@@ -1,0 +1,94 @@
+body {
+  background-color: #D5D8DC;
+}
+
+.main-container {
+  margin-top: 40px;
+}
+
+.clock-box {
+  background-color: white;
+  padding: 5px 25px;
+  margin-bottom: 5px;
+  text-align: right;
+}
+
+.question-box{
+  background-color: #fff;
+  padding: 10px 25px 10px 25px;
+}
+
+.nav-box {
+  background-color: #fff;
+  padding: 0 25px 15px 25px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.legends-heading {
+  margin-bottom: 15px;
+}
+
+.palette-button {
+  margin: 2px;
+}
+.navigation-button {
+  margin-top: 20px;
+  margin-right: 15px;
+}
+
+.active {
+  background-color: blue !important;
+}
+
+.palette.well {
+  padding: 20px;
+}
+
+.legends-buttons-info > div {
+  margin-bottom: 10px;
+}
+
+.box {
+  padding: 3px 8px;
+  color: #fff;
+}
+
+.answered {
+  display: inline-block;
+  background-color: #239B56;
+}
+
+.not-visited {
+  display: inline-block;
+  background-color: #989898;
+}
+
+.visited-not-answered {
+  display: inline-block;
+  background-color: #D98880;
+}
+
+.current-question {
+  display: inline-block;
+  background-color: blue;
+}
+
+.box-color-info {
+  display: inline-block;
+  margin-left: 15px;
+  font-size: 14px;
+}
+
+.statement {
+  color: #C0392B;
+}
+
+.submit-button {
+  margin-top: 20px;
+}
+
+.time-left-text {
+  color: #000;
+  font-size: 12px;
+}
