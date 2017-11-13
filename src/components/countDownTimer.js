@@ -21,8 +21,8 @@ class CountDownTimer extends Component {
   }
 
   tick() {
-    var second = this.state.sec;
-    var minute = this.state.min
+    let second = this.state.sec;
+    let minute = this.state.min
     second = parseInt(second,10);
     minute = parseInt(minute,10);
     if(second===0 && minute>0){

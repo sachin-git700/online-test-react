@@ -25,7 +25,7 @@ function Button(props) {
       color: "white"
     }
   ]
-  
+
   return (
     <span className="">
       <button type="button" className={class1} style={styleArr[props.btnStyled[props.value]]} onClick={props.handleNavigation} value={props.value}>
@@ -37,7 +37,7 @@ function Button(props) {
 }
 
 function PaletteButtons(props) {
-  var i, tableBody=[];
+  let i, tableBody=[];
   for(i=0; i<props.questions.length; i++) {
     const btn = <Button key={props.questions[i].id} handleNavigation={props.handleNavigation} value={i}
                   current={props.current} response={props.response}

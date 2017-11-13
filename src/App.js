@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Quiz from './components/quiz';
-import UserForm from './components/getUserInfo'
+import UserForm from './components/userInfo'
 import TestCompleteMessage from './components/testCompleteMessage'
 import './App.css';
 

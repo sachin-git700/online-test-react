@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Palette from './palette';
-import DisplayQuestion from './DisplayQuestion';
+import DisplayQuestion from './displayQuestion';
 import CountDownTimer from './countDownTimer';
 
 class Quiz extends Component {
@@ -17,6 +17,8 @@ class Quiz extends Component {
     // 0 fo not visited
     // 1 for visited but not answered
     // 2 for answered
+    // these value are being used in the Button function inside palette component
+    // to style the button to display proper legends information
     this.handleNavigation = this.handleNavigation.bind(this);
     this.handleResponseChange = this.handleResponseChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -44,7 +46,7 @@ class Quiz extends Component {
   }
 
   handleSubmit() {
-    var i,count=0;
+    let i,count=0;
     for(i=0;i<this.props.questions.length;i++) {
       if(this.props.questions[i].answer === this.state.response[i]) {
         count++;
@@ -78,7 +80,7 @@ class Quiz extends Component {
   }
 
   render() {
-    var element = (
+    return (
         <form>
           <div className="row">
             <div className="col-sm-8">
@@ -96,7 +98,6 @@ class Quiz extends Component {
           </div>
         </form>
       );
-    return element;
   }
 }
 
