@@ -9,7 +9,7 @@ You will also see any lint errors in the console.
 
 ### Count Down Timer
 
-The value for countdown timer can be set in the Clock component present in src/components/countDownTimer.js
+The value for countdown timer can be set in the countDownTimer component present in src/components/countDownTimer.js
 
 ### Adding more Questions
 
@@ -24,3 +24,9 @@ Currently there are 5 questions in this test. To add more questions append them 
 
 Also questions should be separated with commas.
 Order of questions can also be changed but question id must start with 0 and should be increased by 1 subsequently.
+
+
+### Deployment
+
+The project has been deployed on Heroku.
+https://online-test-questions.herokuapp.com/
